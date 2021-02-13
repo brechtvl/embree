@@ -64,6 +64,7 @@ namespace embree
     case CPU::NEHALEM:         frequency_level = FREQUENCY_SIMD128; break;
     case CPU::CORE2:           frequency_level = FREQUENCY_SIMD128; break;
     case CPU::CORE1:           frequency_level = FREQUENCY_SIMD128; break;
+    case CPU::ARM:             frequency_level = FREQUENCY_SIMD128; break;
     }
 
     /* initialize global state */
