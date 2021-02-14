@@ -10,7 +10,11 @@ ELSEIF (TASKING_TBB)
   if (NOT ${EMBREE_TBB_ROOT} STREQUAL "")
     set(TBB_ROOT ${EMBREE_TBB_ROOT})
   endif()
-  FIND_PACKAGE(TBB REQUIRED tbb)
+  if (TBB_STATIC_LIB)
+    FIND_PACKAGE(TBB REQUIRED tbb_static)
+  else ()
+    FIND_PACKAGE(TBB REQUIRED tbb)
+  endif ()
 
   ##############################################################
   # Create tasking target and link against TBB. Also set include directory
