@@ -3,9 +3,10 @@
 
 #pragma once
 
-/* Avoid refinition warnings. */
-#undef likely
-#undef unlikely
+/* Make precision match SSE */
+#define SSE2NEON_PRECISE_MINMAX 1
+#define SSE2NEON_PRECISE_DIV 1
+#define SSE2NEON_PRECISE_SQRT 1
 
 #include "sse2neon.h"
 
